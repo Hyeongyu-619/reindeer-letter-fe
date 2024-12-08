@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import LottieLetterSend from "@/components/LottieLetterSend";
-import Header from "@/components/header";
 import WritingText from "./WritingText";
 import BackButton from "./BackButton";
+import Header from "../header";
 
 export default function WritingCompleteClient() {
   const [isLottieComplete, setIsLottieComplete] = useState(false);
