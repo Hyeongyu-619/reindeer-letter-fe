@@ -20,13 +20,10 @@ interface InfiniteFetchReturnType<T> {
 }
 
 /**
- * T: 응답 데이터에서 item 하나의 타입
- * U: 요청 바디 타입
+ * 무한 스크롤을 위한 상태와 서버 상태를 가져오는 커스텀 훅입니다.
  *
  * @param route API 경로
- * @param method HTTP 메소드
- * @param body 요청 바디
- * @returns 응답 데이터, 로딩 상태, 에러
+ * @returns 무한 스크롤 상태 (fetchMore, hasMore)와 서버 상태 (데이터, 로딩 상태, 에러 상태, 에러 객체)
  */
 export default function useInfiniteFetch<T>({ route }: UseInfiniteFetchType) {
   const [page, setPage] = useState(1);
